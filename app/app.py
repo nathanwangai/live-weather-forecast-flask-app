@@ -26,17 +26,17 @@ def hello_world():
         weather_data = np.array([temp, dew, humidity, precip, snowdepth, windspeed, cloudcover, visibility])
         weather_data = np.expand_dims(weather_data, axis=0)
         
-        model_in = load('model.joblib')
+        model_in = load('app/model.joblib')
         proba_list = (model_in.predict_proba(weather_data)*100).flatten().tolist()
         proba_df = pd.DataFrame({'class' : class_list,
                                  'probability' : proba_list})
 
         random_string = uuid.uuid4().hex
-        path = 'static/' + random_string + '.jpg'
+        path = 'app/static/' + random_string + '.jpg'
         make_bar_chart(path, proba_df)
         text = interpret_results(proba_df)
 
-        return render_template('index.html', href=path, text_explanation = text)
+        return render_template('index.html', href=path[4:], text_explanation = text)
 
 # ------------------------------ non-flask code ---------------------------------
 
