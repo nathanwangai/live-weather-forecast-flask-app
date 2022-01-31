@@ -1,0 +1,46 @@
+<html>
+    <body bgcolor=#ADD8E6>
+
+        <center>
+
+            <h1>Machine Learning Weather Forecast</h1><br><br>
+
+            <img src="{{ href }}" height=600 /><br><br><br>
+
+            <h1>{{ text_explanation }}</h1><br><br>
+
+            <form method='POST'>
+                <table style='font-weight:bold'>
+                    <tr> 
+                        <td align='right'>Temperature : <input type='text', name='temp', placeholder='celsius'></td>
+                    </tr>
+                    <tr> 
+                        <td align='right'>Dew Point : <input type='text', name='dew', placeholder='celsius'></td>
+                    </tr>
+                    <tr>
+                        <td align='right'>Humidity : <input type='text', name='humidity', placeholder='percent'></td>
+                    <tr>
+                        <td align='right'> Precipitation : <input type='text', name='precip', placeholder='millimeters'></td>
+                    </tr>
+                    <tr>
+                        <td align='right'>Snow Depth : <input type='text', name='snowdepth', placeholder='centimeters'></td>
+                    </tr>
+                    <tr>
+                        <td align='right'>Wind Speed : <input type='text', name='windspeed', placeholder='meters per second'></td>
+                    </tr>
+                    <tr>
+                        <td align='right'>Cloud Cover : <input type='text', name='cloudcover', placeholder='percent'></td>
+                    </tr>
+                    <tr>
+                        <td align='right'>Visibility : <input type='text', name='visibility', placeholder='kilometers'></td>
+                    </tr>
+                    <tr>
+                        <td align='right'><input type='submit', value='Make Prediction'></td>
+                    </tr>
+                </table>
+            </form>
+
+        </center>
+
+    </body>    
+</html>
